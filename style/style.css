@@ -1,220 +1,280 @@
-@import url('https://fonts.googleapis.com/css2?keluarga=Roboto:wght@400; 500; 700; 900&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
-/* root digunakan untuk menampung variabel seperti warna dan px yang digunaakan rem 1 rem = 16px */
+    :root {
+    --primaryTextColor: #232e35; /* Untuk title atau judul */
+    --secondaryTextColor: #656d72; /* Untuk text biasa seperti paragraph contohnya */
 
-:root {
-    --primary-text-color: #232e25;
-    --secondary-text-color: #656d72;
-    --border-color: #f1f1f1;
-    --line-color: #d9d9d9;
-    --primary-background-color: #fff;
-    --second-background-color: #fbfbfb;
-    --third-background-color: #f5f3fe;
-    --primary-icon-color: #7e74f1;
-    --primary-icon-color-hover: #5d51e8;
-    --section-padding: 6rem 0;
-    --item-border-radius: 0.7rem;
-}
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9; /* untuk line di pre-title */
 
-* {
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+
+    --primaryIconColor: #7e74f1;
+    --primaryIconColorHover: #5d51e8;
+
+    --sectionPadding: 6rem 0;
+
+    --itemBorderRadius: 0.7rem;
+    }
+
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    scroll-behavior: smooth;
+    }
 
-body {
+    body {
     font-family: "Roboto", sans-serif;
-}
+    }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong {
-    color: var(--primary-text-color);
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+    color: var(--primaryTextColor);
+    }
 
-p {
-    font-size: 1rem;
-    /* rem sama saja seperti pixel tapi 1 rem = 16px*/
-    line-height: 1.9rem;
-}
+    p {
+    font-size: 1rem; /* 16 px */
+    line-height: 1.9rem; /*30.4 px */
+    }
 
-p,
-span,
-label,
-input,
-textarea,
-li {
-    color: var(--secondary-text-color);
-}
+    p,
+    span,
+    label,
+    input,
+    textarea,
+    li {
+    color: var(--secondaryTextColor);
+    }
 
-a {
+    a {
     text-decoration: none;
-}
+    }
 
-.main-container {
+    /* End Preparation */
+
+    .main-container {
     width: 1200px;
     margin: 0 auto;
-}
+    }
 
-@media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1200px) {
     .main-container {
         width: 90%;
     }
-}
+    }
 
+    /* Buttons */
+    .btn {
+    padding: 1rem 1.5rem;
+    background: white;
+    border: 1.5px solid var(--borderColor);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    }
 
-/* bagian  title */
+    .btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    }
 
-.section-title {
+    /* Titles */
+    .section-title {
     margin: 1rem 0 4rem;
     font-size: 2rem;
-}
+    }
 
-.pre-title {
+    .pre-title {
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    color: var(--secondary-text-color);
+    color: var(--secondaryTextColor);
     position: relative;
     padding-left: 40px;
     width: fit-content;
     font-weight: 400;
     font-size: 0.9rem;
-}
+    }
 
-.pre-title::before {
+    .pre-title::before {
     content: "";
     width: 30px;
     height: 1px;
-    background-color: var(--line-color);
+    background: var(--lineColor);
     position: absolute;
     display: block;
     left: 0;
     top: 50%;
-}
+    }
 
-
-/* layout grid */
-
-.grid-3 {
+    /* Layouts */
+    .grid-3 {
     display: grid;
-    /*membuat renponsiv dengan cara mengulang dengan auto fit agar mengexpen*/
+    /* grid-template-columns: 1fr 1fr 1fr; use this first, use code below when its time for explaining responsive design part */
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3rem;
-}
+    }
 
-
-/* logo dan navigation menu */
-
-.nav {
+    /* --- Logo and Navigation Menu --- */
+    .nav {
     display: flex;
     justify-content: space-between;
     padding: 2rem 0;
-}
+    }
 
-.nav ul {
+    nav ul {
     list-style: none;
     display: flex;
     gap: 3rem;
-}
+    }
 
-.logo {
+    /* Logo */
+    .logo {
     display: flex;
     align-items: center;
-    font-weight: 700px;
+    font-weight: 700;
     font-size: 2rem;
-}
+    }
 
-.logo a {
-    color: var(--primary-text-color);
-}
+    .logo a {
+    color: var(--primaryTextColor);
+    }
 
-nav ul li {
+    /* Navigation Menu */
+    nav ul li {
     display: flex;
     align-items: center;
-}
+    }
 
-nav ul li a {
-    color: var(--primary-text-color);
-}
+    nav ul li a {
+    color: var(--primaryTextColor);
+    }
 
-
-/* untuk bagian burger */
-
-.burger div {
+    /* Burger - Save for later on video */
+    .burger div {
     width: 25px;
     height: 2px;
     background-color: #000;
     margin: 7px;
     transition: all 0.3s;
     z-index: 99;
-    /* agar selalau muncul dipaling atas  */
-}
+    }
 
-.burger {
+    .burger {
     display: none;
+    z-index: 99;
     position: fixed;
     top: 33px;
     right: 35px;
-}
+    }
 
-
-/* bagian hero atau gambar */
-
-#hero {
+    /* Hero Section */
+    #hero {
     height: 720px;
     display: grid;
-    /* fr atau frection untuk membagu colom */
     grid-template-columns: 1fr 1fr;
+    /* We're not going to use automatic template columns, because we need to know when the columns is go below. So we can exchange the order of the element */
     align-items: center;
-}
+    }
 
-.hero-name {
+    .hero-name {
     font-size: 3rem;
     font-weight: 700;
-    margin: 0.5rem 0;
-}
+    margin: 0.5rem 0 1rem;
+    }
 
-.hero-name span {
-    color: #5d51e8;
-}
+    .hero-name span {
+    color: var(--primaryIconColor) !important;
+    }
 
-.hero-right img {
+    .hero-right img {
     width: 90%;
-}
+    }
 
-.hero-right {
+    .hero-right {
     display: flex;
     justify-content: center;
+    }
+
+    /* Services Section */
+    #services {
+    background-color: #ECFEFF;
+    padding: var(--sectionPadding);
+    }
+
+    .services .pre-title {
+        margin: auto;
+    }
+    
+    .services-title {
+        text-align: center;
+    }
+    
+    .service {
+        padding: 3rem 2rem;
+        text-align: center;
+        background-color: var(--secondaryBackgroundColor);
+        border-radius: var(--itemBorderRadius);
+    }
+    /* untuk tampilan lebih menojol dan ana animasi */
+    .service {
+         /* Tambahkan ini untuk transisi halus */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+         /* Tambahkan ini untuk efek lift-up sedikit pada tampilan default */
+        transform: scale(1.02);
+         /* Tambahkan ini untuk menambahkan bayangan pada tampilan default */
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    
+    .service:hover {
+        transform: scale(1.05);
+    }
+    .service.active {
+        /* Tambahkan gaya untuk kelas .active di sini */
+        transform: scale(1.1); /* Contoh: perbesar elemen saat aktif */
+        box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Contoh: tambahkan bayangan saat aktif */
+    }
+    
+    .service h4 {
+        margin: 1.5rem 0;
+        font-weight: 500;
+        font-size: 1.05rem;
+    }
+    
+    .service-icon {
+        background-color: var(--thirdBackgroundColor);
+        width: fit-content;
+        margin: 0 auto;
+        padding: 1rem 1.3rem;
+        border-radius: 0.5rem;
+    }
+
+    
+/* style check box kebahagiaaan */
+.form {
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: beige;
+    --main-color: black;
+    padding: 20px;
+    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px; /* Reduced gap to save space */
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
 }
 
-
-/* bagian servis sectio */
-
-#services {
-    background-color: var(--second-background-color);
-    padding: var(--section-padding);
-}
-
-.services .pre-title {
-    margin: auto;
-}
-
-.services-title {
-    text-align: center;
-}
-
-.service {
-    padding: 3rem 2rem;
-    text-align: center;
-    background-color: var(--primary-background-color);
-    border-radius: var(--item-border-radius);
-}
-/* untuk tampilan lebih menojol dan ana animasi */
-.service {
+.form {
      /* Tambahkan ini untuk transisi halus */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
      /* Tambahkan ini untuk efek lift-up sedikit pada tampilan default */
@@ -223,286 +283,433 @@ nav ul li a {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.service:hover {
+
+.form:hover {
     transform: scale(1.05);
 }
-.service.active {
+.form.active {
     /* Tambahkan gaya untuk kelas .active di sini */
     transform: scale(1.1); /* Contoh: perbesar elemen saat aktif */
     box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Contoh: tambahkan bayangan saat aktif */
 }
 
-.service h4 {
-    margin: 1.5rem 0;
-    font-weight: 500;
-    font-size: 1.05rem;
+
+.title {
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 25px;
 }
 
-.service-icon {
-    background-color: var(--third-background-color);
-    width: fit-content;
-    margin: 0 auto;
-    padding: 1rem 1.3rem;
-    border-radius: 0.5rem;
+.title span {
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 17px;
 }
 
-
-/* portofilio section */
-#portofolios {
-    padding: var(--section-padding);
-    background-color: var(--primary-background-color); /* Menambahkan warna latar belakang */
-}
-
-.portofolio {
-    border-radius: var(--item-border-radius);
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    transition: transform 0.3s ease; /* Menambahkan transisi */
-}
-
-.portofolio:hover {
-    transform: scale(1.05); /* Menambahkan efek hover */
-}
-
-.portofolio-cover {
-    height: 250px;
-}
-
-.portofolio-cover img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.portofolio-info {
-    padding: 2rem 1.5rem;
-    background-color: #fff; /* Menambahkan warna latar belakang */
-}
-
-.portofolio-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-}
-
-.portofolio h4 {
-    font-weight: 500;
-    font-size: 1.05rem;
-}
-
-.portofolio-link {
-    transition: transform 0.3s ease;
-}
-
-.portofolio-link:hover {
-    transform: scale(1.2);
-}
-
-.portofolio-link:hover img {
-    filter: brightness(0) saturate(100%) invert(28%) sepia(43%) saturate(6703%) hue-rotate(253deg) brightness(92%) contrast(92%);
-}
-
-.portofolio-tags {
-    display: flex;
-    gap: 1rem;
-    margin: 1rem 0;
-}
-
-.portofolio-tags div {
-    font-size: 0.9rem;
-    border: 1px solid var(--border-color);
-    padding: 0.4rem 1rem;
-    color: var(--secondary-text-color);
-    border-radius: 5px; /* Menambahkan border radius */
-}
-
-
-#skills {
-    padding: var(--section-padding);
-    background-color: var(--second-background-color);
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-}
-
-.education {
-    display: flex;
-    gap: 1rem;
-}
-
-.education .line {
-    padding: 0 0.7rem;
-}
-
-.education .line div {
-    width: 2px;
-    height: 100%;
-    background-color: var(--border-color);
-    position: relative;
-}
-
-.education-info p {
-    margin: 0.6rem 0 1.4rem;
-}
-
-.education-years {
-    margin-bottom: 3rem;
-}
-
-
-/* garis titik  */
-
-.education .line div::before {
-    content: "";
-    width: 15px;
-    height: 15px;
-    background-color: var(--border-color);
-    border-radius: 50%;
-    position: absolute;
-    left: -6px;
-}
-
-.skills-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 1.5rem;
-}
-
-.skills-right ul {
-    line-height: 2rem;
-    padding: 0 1rem;
-}
-
-
-/* contact section */
-
-#contact {
-    padding: var(--section-padding);
-}
-
-.contact {
-    display: grid;
-    /* grid-template-columns: 1fr 1fr; */
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3rem;
-}
-
-.contact-form div {
-    margin-bottom: 1.4rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.75rem 1.3rem;
-    font-family: "Roboto", sans-serif;
-    background: var(--second-background-color);
-    border: ipx solid var(--border-color);
-    border-radius: 3px;
-    resize: none;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: #9d9fa1;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
+.input {
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
     outline: none;
-    border: 1px solid #7d7d7d;
 }
 
-.btn-submit {
-    width: 100%;
-    padding: 0.75rem 1.3rem;
-    background-color: var(--primary-icon-color);
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
+.input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
 }
 
-.btn-submit:hover {
-    background: var(--primary-icon-color-hover);
+.input:focus {
+    border: 2px solid var(--input-focus);
 }
 
-
-/* posisi kanan*/
-
-.contact-item {
+.login-with {
     display: flex;
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
+    gap: 10px; /* Reduced gap to save space */
 }
 
-.contact-item-icon {
-    background: var(--third-background-color);
-    width: 53px;
-    height: 53px;
-    border-radius: 9px;
+.button-log {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    color: var(--font-color);
+    font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contact-item-icon img {
-    filter: brightness(0) saturate(100%) invert(28%) sepia(43%) saturate(6703%) hue-rotate(253deg) brightness(92%) contrast(92%);
+.icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
 }
 
-.contact-item-detail h4 {
-    margin-bottom: 0.6rem;
+.button-log:active, .button-confirm:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
 }
 
-
-/* footer */
-
-footer {
-    padding: 4rem 0;
-    background: var(--second-background-color);
-    text-align: center;
-}
-
-.footer-icons {
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.footer-icons a {
-    margin: 0 0.5rem;
-    position: relative;
-}
-
-.footer-icons svg {
-    fill: #3f3e40;
-    transition: fill 0.3s ease;
-}
-
-.footer-icons svg:hover {
-    fill: #000;
-}
-
-.footer-icons a::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    top: -30px; /* Ubah posisi dari bottom ke top */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #000;
-    color: #fff;
-    padding: 5px;
+.button-confirm {
+    margin: 50px auto 0 auto;
+    width: 120px;
+    height: 40px;
     border-radius: 5px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, top 0.3s ease; /* Ubah transisi dari bottom ke top */
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
+    cursor: pointer;
+}
+  /* end kebahagaiaan */
+
+  /* awal cek */
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
 }
 
-.footer-icons a:hover::after {
-    top: -50px; /* Ubah posisi dari bottom ke top */
-    opacity: 1;
+.rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
 }
+
+.rating:not(:checked) > label:before {
+    content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+}
+
+.rating > input:checked ~ label {
+    color: #ffa723;
+}    
+
+    /* Portfolios */
+    #portfolios {
+    padding: var(--sectionPadding);
+    }
+
+    .portfolio {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden; /* supaya gambar yang diatas itu dia ngikut border radiusnya, karena yang dikasih border radius disini adalah div portfolio ini */
+    border: 1px solid var(--borderColor);
+    }
+
+    .portfolio-cover {
+    height: 250px;
+    }
+
+    .portfolio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+    .portfolio-info {
+    padding: 2rem 1.5rem;
+    }
+
+    .portfolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    }
+
+    .portfolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+    }
+
+    .portfolio-title a svg:hover {
+    fill: var(--primaryIconColor);
+    }
+
+    .portfolio-title a svg {
+    transition: 0.2s ease-in-out;
+    }
+
+    .portfolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+    }
+
+    .portfolio-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--borderColor);
+    padding: 0.4rem 1rem;
+    color: var(--secondaryTextColor);
+    }
+
+    .portfolio-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--borderColor);
+    padding: 0.4rem 1rem;
+    color: var(--secondaryTextColor);
+    }
+
+ /* pesan */
+  /* Input container */
+.input-container {
+    position: relative;
+    margin: 20px;
+}
+
+  /* Input field */
+.input-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    background-color: transparent;
+}
+
+/* Input label */
+.input-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: rgba(204, 204, 204, 0);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+  /* Input highlight */
+.input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #007bff;
+    transition: all 0.3s ease;
+}
+  
+  /* Input field:focus styles */
+  .input-field:focus + .input-label {
+    top: -20px;
+    font-size: 12px;
+    color: #007bff;
+  }
+  
+  .input-field:focus + .input-label + .input-highlight {
+    width: 100%;
+  }
+  
+
+
+    /* Skills and Education */
+    #skills {
+    padding: var(--sectionPadding);
+    background: #ECFDF5;
+    }
+
+    .skills-grid {
+    display: grid;
+    /* grid-template-columns: 40% 60%; */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    }
+
+    .education {
+    display: flex;
+    gap: 1rem;
+    }
+
+    .education .line {
+    padding: 0 0.7rem;
+    }
+
+    .education .line div {
+    width: 2px;
+    height: 100%;
+    background: var(--borderColor);
+    position: relative;
+    }
+
+    .education-info p {
+    margin: 0.6rem 0 1.4rem;
+    }
+
+    .education-years {
+    margin-bottom: 3rem;
+    }
+
+    /* The dot on the line */
+    .education .line div:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: var(--borderColor);
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+    }
+
+    /* Right side of Skills */
+    .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+    }
+
+    .skills-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+    }
+
+    /* Contact Section */
+    #contact {
+    padding: var(--sectionPadding);
+    }
+
+    .contact {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    }
+
+    .contact-form div {
+    margin-bottom: 1.4rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: var(--secondaryBackgroundColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    resize: none;
+    }
+
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+    color: #9d9fa1;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7d;
+    }
+
+    .btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: var(--primaryIconColor);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    }
+
+    .btn-submit:hover {
+    background-color: var(--primaryIconColorHover);
+    }
+
+    /* Contact Section - Right Side */
+    .contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    }
+
+    .contact-item-icon {
+    background: var(--thirdBackgroundColor);
+    /* padding: 0.8rem 1rem; */
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .contact-item-icon svg {
+    fill: var(--primaryIconColor);
+    }
+
+    .contact-item-detail h4 {
+    margin-bottom: 0.6rem;
+    }
+
+    /* Footer Section */
+    footer {
+    padding: 4rem 0;
+    background: #FFFBEB;
+    text-align: center;
+    }
+
+    .footer-icons {
+        margin-bottom: 1rem;
+        position: relative;
+    }
+
+    .footer-icons a {
+        margin: 0 0.5rem;
+        position: relative;
+    }
+
+    .footer-icons svg {
+        fill: #3f3e40;
+        transition: fill 0.3s ease;
+    }
+
+    .footer-icons svg:hover {
+        fill: #000;
+    }
+
+    .footer-icons a::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        top: -30px; /* Ubah posisi dari bottom ke top */
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, top 0.3s ease; /* Ubah transisi dari bottom ke top */
+    }
+
+    .footer-icons a:hover::after {
+        top: -50px; /* Ubah posisi dari bottom ke top */
+        opacity: 1;
+    }
