@@ -11,46 +11,46 @@
 </head>
 
 <body>
-
-    <!-- ini header -->
+    <!-- Header -->
     <header>
         <div class="main-container">
             <div class="nav">
                 <div class="logo">
-                    <!-- BKR = bimbingan konseling rumah -->
-                    <a href="/">BKR</a>
+                <a href="#">AMR</a>
                 </div>
                 <nav>
-                    <!-- untuk bagian pilihan -->
                     <ul>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#portofolios">Portofolios</a></li>
+                        <li><a href="#portfolios">Portfolio</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                <!-- untuk tombol 3 dikanan pojok atas saat mobile -->
                 <div class="burger">
                     <div class="line-1"></div>
                     <div class="line-2"></div>
                     <div class="line-3"></div>
                 </div>
             </div>
+
             <section id="hero">
                 <div class="hero-left">
-                    <h3 class="pre-title">Bimbingan dikami saja</h3>
-                    <h1 class="hero-name">Bimbingan <span>Konseling</span> Rumahan</h1>
-                    <p>Apa itu Bimbingan Konseling Rumahan? bimbingan yang dimana bisa dilakukan berjarak atau online dari rumah bimbingan ini dilakukan oleh orang yang cukup mahir di bidangnya “Konseling Rumahan: Menyembuhkan, Mengembangkan, dan Membangun di Tempat Anda Paling Nyaman” </p>
+                    <h3 class="pre-title">THE BEST PLACE IN THE WORLD</h3>
+                    <h1 class="hero-name">AMO<span>HAR</span></h1>
+                    <p>
+                    Apa itu AMOHAR? AMOHAR adalah Singkatan dari An Emotional Harbor yang dimana menjadi tempat untuk mengungkap segala bentuk emosi yang dimiliki setiap individu` "Sending a warm hug" 
+                    </p>
                 </div>
+
                 <div class="hero-right">
-                    <img src="./image/portofolio/adr2.svg" alt="person standing">
+                    <img src="./image/gbr1.jpg" alt="Person Standing" />
                 </div>
             </section>
         </div>
     </header>
-    <!-- ini bagian akhir header -->
+    <!-- End Header -->
 
-    <!-- bagian service -->
+    <!-- Services -->
     <section id="services">
         <div class="services main-container">
             <h3 class="pre-title">Services</h3>
@@ -61,109 +61,198 @@
                     <div class="service-icon">
                         <img src="./image/iconmonstr-crown-4.svg" alt="person standing">
                     </div>
-                    <h4>Konseling</h4>
-                    <p> konseling dengan tatap muka bersama orang yang cukup pengalaman dibidangnya
+                    <h4>Self Harm</h4>
+                    <p> Penting untuk diingat bahwa menyakiti diri sendiri bukanlah cara yang sehat untuk menangani stres atau masalah. Ada banyak cara yang lebih baik untuk mengelola emosi dan mencari bantuan dari orang-orang yang peduli.
                     </p>
                 </div>
+
                 <!-- service kedua-->
+                <form class="form" id="myForm" onsubmit="event.preventDefault(); sendMessageRating();">
+                    <div class="title">Rate Your Mood<br><span>Your Name</span></div>
+                    <input type="text" placeholder="Name" name="name" class="input">
+                    <h4>Feeling on top of the world today, how would you rate your day on a scale of 1-5</h4>
+                    <div class="rating">
+                    <input value="5" name="rate" id="star5" type="radio">
+                    <label title="Sangat Senang" for="star5"></label>
+                    <input value="4" name="rate" id="star4" type="radio">
+                    <label title="Cukup Senang" for="star4"></label>
+                    <input value="3" name="rate" id="star3" type="radio" checked="">
+                    <label title="Senang" for="star3"></label>
+                    <input value="2" name="rate" id="star2" type="radio">
+                    <label title="Cukup" for="star2"></label>
+                    <input value="1" name="rate" id="star1" type="radio">
+                    <label title="Buruk" for="star1"></label>
+                    </div>
+                    <button class="button-confirm" type="submit">Let`s go →</button>
+                </form>
+
+                <!-- service ke 3 -->
                 <div class="service">
                     <div class="service-icon">
                         <img src="./image/iconmonstr-email-2.svg" alt="person standing">
                     </div>
-                    <h4>Message</h4>
-                    <p> konseling dengan mengirim pesan melalui wa agar lebih mudah dan bisa kapan saja
+                    <h4>Membimbing dan Mendengarkan</h4>
+                    <p> Tidak ada yang salah dengan apa yang Anda rasakan. Setiap orang memiliki cara mereka sendiri untuk menghadapi situasi.
+                        Anda tidak sendirian dalam ini. Kami di sini untuk mendukung Anda dan Mendengarkan Anda
                     </p>
                 </div>
-                <!-- service ketiga -->
-                <div class="service">
-                    <div class="service-icon">
-                        <img src="./image/iconmonstr-phone-7.svg" alt="person standing">
-                    </div>
-                    <h4>Tlephon</h4>
-                    <p> Konseling dengan menggunakan telepon dengan jarak jaug dan agar mudah dan cepat 
-                    </p>
-                </div>
+                
             </div>
         </div>
     </section>
-    <!-- bagian kahir service -->
+    <!-- End Services -->
 
-    <!-- portofolio -->
-
-    <section id="portofolios">
-        <div class="portofolios main-container">
+    <!-- Portfolios -->
+    <section id="portfolios">
+        <div class="portfolios main-container">
             <h3 class="pre-title">My Works</h3>
-            <h1 class="section-title">Featured Portfolios</h1>
-
+            <h1 class="section-title">Bimbingan Konseling</h1>
             <div class="grid-3">
-                <!-- portofolio 1 -->
-                <div class="portofolio">
-                    <div class="portofolio-cover">
-                        <img src="./image/portofolio/sapiens.svg" alt="portofolio 1">
+
+                <!-- Portfolio 1 -->
+                <div class="portfolio">
+                    <div class="portfolio-cover">
+                    <img src="./image/portofolio/add2.jpg" alt="Portfolio 1" />
                     </div>
-                    <div class="portofolio-info">
-                        <div class="portofolio-title">
-                            <h4>bimbingan</h4>
-                            <a href="/" class="portofolio-link">
-                                <img src="./image/iconmonstr-share-10.svg" alt="icon">
-                            </a>
-                        </div>
-                        <div class="portofolio-tags">
-                            <div>react</div>
-                            <div>tailwind</div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate cupiditate iste nobis quae ipsam maiores. Unde optio nam tempora?</p>
+                    <div class="portfolio-info">
+                    <div class="portfolio-title">
+                        <h4>Deska</h4>
+                        <a href="https://www.instagram.com/dnf0929_?igsh=Nm9sMTBhYmcxb3dp`" class="portfolio-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z" />
+                        </svg>
+                        </a>
+                    </div>
+                    <!-- <div class="portfolio-tags"> -->
+                        <p>kontak Anda</p>
+                        <div class="input-container">
+                            <input placeholder="Number or IG" id="myInput1" class="input-field" type="text" onkeypress="handleKeyPressMessage(event, 'myInput1', 'Deska')">
+                            <label for="myInput1" class="input-label">Number or Ig</label>
+                            <span class="input-highlight"></span>
+                        </div> 
+                    <!-- </div> -->
+                    <p>
+                        Mampu memberikan bantuan psikologis kepada individu atau kelompok dan mengembangkan program
+                        bimbingan dan konseling sesuai kebutuhan
+                    </p>
                     </div>
                 </div>
-                <!-- portofolio 2 -->
-                <div class="portofolio">
-                    <div class="portofolio-cover">
-                        <img src="./image/portofolio/sapiens.svg" alt="portofolio 2">
+                
+                <!-- Portfolio 2 -->
+                <div class="portfolio">
+                    <div class="portfolio-cover">
+                    <img src="./image/portofolio/add4.jpg" alt="Portfolio 2" />
                     </div>
-                    <div class="portofolio-info">
-                        <div class="portofolio-title">
-                            <h4>Psikologi anak</h4>
-                            <a href="/" class="portofolio-link">
-                                <img src="./image/iconmonstr-share-10.svg" alt="icon 2">
-                            </a>
-                        </div>
-                        <div class="portofolio-tags">
-                            <div>react</div>
-                            <div>tailwind</div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate cupiditate iste nobis quae ipsam maiores. Unde optio nam tempora?</p>
+                    <div class="portfolio-info">
+                    <div class="portfolio-title">
+                        <h4>Kela</h4>
+                        <a href="https://www.instagram.com/kaeylla._?igsh=MXFtc3V3ZmdubjlpcA==" class="portfolio-link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z" />
+                        </svg>
+                        </a>
                     </div>
+                    <!-- <div class="portfolio-tags"> -->
+                        <p>kontak Anda</p>
+                        <div class="input-container">
+                            <input placeholder="Number or IG" id="myInput2" class="input-field" type="text" onkeypress="handleKeyPressMessage(event, 'myInput2', 'Kela')">
+                            <label for="myInput2" class="input-label">Number or Ig</label>
+                            <span class="input-highlight"></span>
+                        </div> 
+                    <!-- </div> -->
+                    <p>
+                        Mampu melakukan asesmen psikologis untuk mengetahui potensi dan masalah 
+                        juga berkomunikasi efektif dan empatik dengan klien dan stakeholder
+                    </p>
+                    </div>
+                </div>
+    
+                <!-- Portfolio 3 -->
+                <div class="portfolio">
+                <div class="portfolio-cover">
+                    <img
+                    src="./image/portofolio/add5.jpg"
+                    alt="Portfolio 1"
+                    />
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-title">
+                    <h4>Rena</h4>
+                    <a href="https://www.instagram.com/rena_ramadhonaa27?igsh=MWo0eHJvM2x4dG1hcg==" class="portfolio-link">
+                        <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        >
+                        <path
+                            d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
+                        />
+                        </svg>
+                    </a>
+                    </div>
+                    <!-- <div class="portfolio-tags"> -->
+                        <p>Kontak Anda</p>
+                        <div class="input-container">
+                            <input placeholder="Number or IG" id="myInput3" class="input-field" type="text" onkeypress="handleKeyPressMessage(event, 'myInput3', 'Rena')">
+                            <label for="myInput3" class="input-label">Number or Ig</label>
+                            <span class="input-highlight"></span>
+                        </div> 
+                    <!-- </div> -->
+                    <p>
+                        berkomunikasi efektif dan empatik dengan klien dan stakeholder dan Mampu
+                        menerapkan etika profesi konselor dan guru BK
+                </div>
                 </div>
 
-                <!-- portofolio 3 -->
-                <div class="portofolio">
-                    <div class="portofolio-cover">
-                        <img src="./image/portofolio/sapiens.svg" alt="portofolio 3">
+                <!-- Portfolio 4 -->
+                <div class="portfolio">
+                    <div class="portfolio-cover">
+                        <img
+                        src="./image/portofolio/add6.jpg"
+                        alt="Portfolio 1"
+                        />
                     </div>
-                    <div class="portofolio-info">
-                        <div class="portofolio-title">
-                            <h4>Wirausaha</h4>
-                            <a href="/" class="portofolio-link">
-                                <img src="./image/iconmonstr-share-10.svg" alt="icon 3">
-                            </a>
+                    <div class="portfolio-info">
+                        <div class="portfolio-title">
+                        <h4>Dinda</h4>
+                        <a href="https://www.instagram.com/_dkhrnnya?igsh=MWI2bDN0Zjc1YTB2Mw==" class="portfolio-link">
+                            <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            >
+                            <path
+                                d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"
+                            />
+                            </svg>
+                        </a>
                         </div>
-                        <div class="portofolio-tags">
-                            <div>react</div>
-                            <div>tailwind</div>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate cupiditate iste nobis quae ipsam maiores. Unde optio nam tempora?</p>
+                        <!-- <div class="portfolio-tags"> -->
+                            <p>Kontak Anda</p>
+                            <div class="input-container">
+                                <input placeholder="Number or IG" id="myInput4" class="input-field" type="text" onkeypress="handleKeyPressMessage(event, 'myInput4', 'Dinda')">
+                                <label for="myInput4" class="input-label">Number or Ig</label>
+                                <span class="input-highlight"></span>
+                            </div> 
+                        <!-- </div> -->
+                        <p>
+                            Mampu mengelola data dan informasi bimbingan dan konseling dan Mampu 
+                            mengembangkan diri secara profesional dan berkolaborasi dengan tim
+                        </p>
                     </div>
-                </div>
+                    </div>
             </div>
-        </div>
-    </section>
-    <!-- bagian akhir portofolio -->
+            </div>
+        </section>
+        <!-- End Portfolios -->
 
-    <!-- bagian awal skill dan edukasi -->
-    <section id="skills">
+        <!-- Skills & Education -->
+        <section id="skills">
         <div class="skills main-container">
             <h3 class="pre-title">learning path</h3>
-            <h1 class="section-title">Skill and Educatiin</h1>
+            <h1 class="section-title">Skill and Education</h1>
 
             <div class="skills-grid">
                 <div class="skills-left">
@@ -175,8 +264,8 @@
 
                         <div class="education-info">
                             <h4 class="education-title">Uhamka University</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                            <h4 class="education-years">2022-2026</h4>
+                            <p>Mengambil Program Studi Bimbingan Konseling</p>
+                            <h4 class="education-years">2022</h4>
                         </div>
                     </div>
                     <!--  edukasi 2 -->
@@ -186,9 +275,9 @@
                         </div>
 
                         <div class="education-info">
-                            <h4 class="education-title">Uhamka University</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                            <h4 class="education-years">2022-2026</h4>
+                            <h4 class="education-title">Senior Hight School</h4>
+                            <p>SmaN 2,Man 3, Muahamdiyah 4, Ponpes AL-Ma'tuq</p>
+                            <h4 class="education-years">2018-2021</h4>
                         </div>
                     </div>
                     <!--  edukasi 3 -->
@@ -198,115 +287,108 @@
                         </div>
 
                         <div class="education-info">
-                            <h4 class="education-title">Uhamka University</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-                            <h4 class="education-years">2022-2026</h4>
+                            <h4 class="education-title">Junior High School</h4>
+                            <p>SMPN 3, MTS 16, SMP 62, Ponpes AL-Ma'tuq</p>
+                            <h4 class="education-years">2015-2018</h4>
                         </div>
                     </div>
                 </div>
                 <div class="skills-right">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sint a possimus! Aliquam neque harum rem, quibusdam, quisquam doloribus praesentium voluptatibus, ipsa perspiciatis repellat soluta labore ad aut assumenda iste.
+                    <p>Keahlian dalam menganalisis perkembangan anak pada tingkat TK-SD serta memperoleh sertifikat HAKI sebagai media dalam pelaksanaan konseling. 
                     </p>
                     <div class="skills-list">
                         <ul>
-                            <li>pemahama</li>
+                            <li>pemahaman</li>
                             <li>mengajar</li>
                             <li>mengayomi</li>
                             <li>mendidik</li>
                         </ul>
 
                         <ul>
-                            <li>pemahama</li>
-                            <li>mengajar</li>
-                            <li>mengayomi</li>
-                            <li>mendidik</li>
+                            <li>Pembuat</li>
+                            
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- bagian akhir skill dan edukasi -->
+        <!-- End Skills & Education  -->
+    
+        <!-- Contact -->
+        <section id="contact">
+            <div class="contact main-container">
+                <div class="contact left">
+                    <form class="contact-form" action="https://formspree.io/f/mbjvnknb" method="POST">
+                        <div>
+                            <input type="text" placeholder="Name" name="name">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Email" name="email">
+                        </div>
+                        <div>
+                            <textarea name="massage" id="message" placeholder="Bagaimana perasaaan anda? 1. Biasa saja 2. senang 3. sangat senang" cols="30" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <button class="btn-submit">send Message</button>
+                        </div>
+                    </form>
+                </div>
 
-
-    <!-- kontak dan email -->
-    <section id="contact">
-        <div class="contact main-container">
-            <div class="contact left">
-                <form class="contact-form" action="https://formspree.io/f/mbjvnknb" method="POST">
-                    <div>
-                        <input type="text" placeholder="Name" name="name">
+                <div class="contact-right">
+                    <!-- kontak ite, pertama -->
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <a href="https://www.google.com/search?client=ms-android-transsion&sca_esv=594810063&hl=in-ID&cs=1&sxsrf=AM9HkKnSfswhMQMsHErEMPD32KSVK88mSw:1704069683019&q=Fakultas+Keguruan+dan+Ilmu+Pendidikan+UHAMKA&ludocid=3980376774037287670&ibp=gwp;0,7&lsig=AB86z5XP2wM2iKh9Kaq2XU7H4CUy&kgs=d89a201ad439773c&shndl=-1&shem=lcspc,lsp&source=sh/x/loc/act/m1/4">
+                                <img src="./image/iconmonstr-location-26.svg" alt="location">
+                            </a>
+                        </div>
+                        <div class="contact-item-detail">
+                            <h4>Alamat</h4>
+                            <p>jln.Tanah Merdeka No.20, RT.11/RW.2, Rambutan, Kec. Ciracas, Kota Jakarta Timur,  Jakarta 13830</p>
+                        </div>
                     </div>
-                    <div>
-                        <input type="email" placeholder="Email" name="email">
+                    <!-- kontak ite, kedua -->
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <a href="https://wa.me/6282121200369">
+                                <img src="./image/iconmonstr-phone-7.svg" alt="location">
+                            </a>                        
+                        </div>
+                        <div class="contact-item-detail">
+                            <h4>Phone</h4>
+                            <p>(+62) 821-2120-0369</p>
+                        </div>
                     </div>
-                    <div>
-                        <textarea name="massage" id="message" placeholder="Message" cols="30" rows="10"></textarea>
+                    <!-- kontak ite, ketiga -->
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <img src="./image/iconmonstr-email-2.svg" alt="location">
+                        </div>
+                        <div class="contact-item-detail">
+                            <h4>Email</h4>
+                            <p>abonkbob@gmail.com</p>
+                        </div>
                     </div>
-                    <div>
-                        <button class="btn-submit">send Message</button>
-                    </div>
-                </form>
+                </div>
             </div>
-
-            <div class="contact-right">
-                <!-- kontak ite, pertama -->
-                <div class="contact-item">
-                    <div class="contact-item-icon">
-                        <a href="https://www.google.com/search?client=ms-android-transsion&sca_esv=594810063&hl=in-ID&cs=1&sxsrf=AM9HkKnSfswhMQMsHErEMPD32KSVK88mSw:1704069683019&q=Fakultas+Keguruan+dan+Ilmu+Pendidikan+UHAMKA&ludocid=3980376774037287670&ibp=gwp;0,7&lsig=AB86z5XP2wM2iKh9Kaq2XU7H4CUy&kgs=d89a201ad439773c&shndl=-1&shem=lcspc,lsp&source=sh/x/loc/act/m1/4">
-                            <img src="./image/iconmonstr-location-26.svg" alt="location">
-                        </a>
-                    </div>
-                    <div class="contact-item-detail">
-                        <h4>Alamat</h4>
-                        <p>jln.Tanah Merdeka No.20, RT.11/RW.2, Rambutan, Kec. Ciracas, Kota Jakarta Timur,  Jakarta 13830</p>
-                    </div>
-                </div>
-                <!-- kontak ite, kedua -->
-                <div class="contact-item">
-                    <div class="contact-item-icon">
-                        <a href="https://wa.me/6282121200369">
-                            <img src="./image/iconmonstr-phone-7.svg" alt="location">
-                        </a>                        
-                    </div>
-                    <div class="contact-item-detail">
-                        <h4>Phone</h4>
-                        <p>(+62) 821-2120-0369</p>
-                    </div>
-                </div>
-                <!-- kontak ite, ketiga -->
-                <div class="contact-item">
-                    <div class="contact-item-icon">
-                        <img src="./image/iconmonstr-email-2.svg" alt="location">
-                    </div>
-                    <div class="contact-item-detail">
-                        <h4>Email</h4>
-                        <p>deska29nf@gamil.com</p>
-                    </div>
-                </div>
+        </section>
+        <!-- End Contact -->
+    
+        <!-- Fomter -->
+        <footer>
+            <div class="footer-icons">
+                <a href="https://www.instagram.com/abrar.drr?igsh=Zjc3ZjF5ODF1dXZ5" data-tooltip="abrar.drr">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://wa.me/6282121200369" data-tooltip="wa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                </a>
             </div>
-        </div>
-    </section>
-
-    <!-- kontak dan email -->
-
-    <!-- copyrigght -->
-    <footer>
-        <div class="footer-icons">
-            <a href="https://www.instagram.com/abrar.drr?igsh=Zjc3ZjF5ODF1dXZ5" data-tooltip="abrar.drr">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="https://wa.me/6282121200369" data-tooltip="wa">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-            </a>
-        </div>
-      
-        <p>&#169; 2023- Abrar Dhiya Rabbani</p>
+        
+            <p>&#169; 2023- Abrar Dhiya Rabbani</p>
     </footer>
-
-
-
-    <!-- akhir copyright -->
+        <!-- End Footer -->
 
     <script src="script/main.js"></script>
 </body>
